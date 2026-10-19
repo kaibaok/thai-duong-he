@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Góc khám phá</title>
+<meta name="description" content="Trang chủ các đề tài khám phá cho bé. Chọn một đề tài và bắt đầu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    <div class="sun" aria-hidden="true"><i></i></div>
+    <div>
+      <h1>Góc khám phá</h1>
+      <p>Chọn một đề tài và bắt đầu nhé.</p>
+    </div>
+  </header>
+
+  <main>
+    <ul class="grid" id="grid">
+      <noscript><li><a href="thai-duong-he/index.html">Du hành Hệ Mặt Trời</a></li></noscript>
+    </ul>
+  </main>
+</div>
+
+<script src="topics.js"></script>
+<script>
+  (function () {
+    var grid = document.getElementById('grid');
+    var html = TOPICS.map(function (t) {
+      return '<li><a class="topic" href="' + t.href + '" style="--bg:' + t.bg + ';--fg:' + t.ink + '">' +
+        '<div class="art">' + t.art + '</div>' +
+        '<div class="body"><h2>' + t.title + '</h2><p>' + t.desc + '</p>' +
+        '<p class="age">' + t.age + '</p><span class="go">Vào khám phá</span></div></a></li>';
+    }).join('');
+    html += '<li><div class="next"><b>Đề tài mới sắp đến</b><span>Chỗ này đang chờ một chuyến khám phá khác.</span></div></li>';
+    grid.innerHTML = html;
+  })();
+</script>
+</body>
+</html>
