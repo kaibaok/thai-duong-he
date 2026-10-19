@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Du hành Hệ Mặt Trời</title>
+<meta name="description" content="Bay từ Trái Đất ra vũ trụ và gặp 8 hành tinh trong Hệ Mặt Trời.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Màn hình 1: bầu trời đêm nhìn từ Trái Đất -->
+<section id="intro" aria-label="Bầu trời đêm">
+  <canvas id="skyCanvas"></canvas>
+  <div class="intro-text">
+    <h1>Đêm nay, bạn thấy gì trên trời?</h1>
+    <p>Trăng, sao, và còn rất nhiều điều xa hơn thế nữa.</p>
+    <button id="startBtn" class="btn btn-big" disabled>Đang chuẩn bị tàu...</button>
+  </div>
+</section>
+
+<!-- Màn hình 2: Hệ Mặt Trời 3D -->
+<main id="space" aria-label="Hệ Mặt Trời" hidden>
+  <canvas id="scene"></canvas>
+  <div id="labels"></div>
+
+  <header class="topbar">
+    <div class="brand">Du hành Hệ Mặt Trời</div>
+    <div class="tools" role="toolbar" aria-label="Công cụ">
+      <button class="btn" id="homeBtn">Về nhà</button>
+      <button class="btn" id="overviewBtn">Toàn cảnh</button>
+      <button class="btn" id="compareBtn">So sánh to nhỏ</button>
+      <button class="btn toggle" id="orbitBtn" aria-pressed="true">Quỹ đạo</button>
+      <div class="speed" role="group" aria-label="Tốc độ quay">
+        <button class="btn sm" data-speed="0.25" aria-pressed="false">Chậm</button>
+        <button class="btn sm" data-speed="1" aria-pressed="true">Vừa</button>
+        <button class="btn sm" data-speed="4" aria-pressed="false">Nhanh</button>
+      </div>
+      <button class="btn toggle" id="musicBtn" aria-pressed="false">Nhạc</button>
+      <div class="stars" aria-live="polite">Sao thưởng: <b id="starCount">0</b></div>
+    </div>
+  </header>
+
+  <aside id="panel" class="card" hidden aria-live="polite"></aside>
+
+  <nav id="dock" aria-label="Chọn hành tinh"></nav>
+
+  <div id="hint" class="hint">Kéo để xoay, cuộn hoặc chụm hai ngón để phóng to. Bấm vào một hành tinh để gặp nó.</div>
+</main>
+
+<!-- Bảng so sánh kích thước -->
+<div id="compare" class="overlay" hidden role="dialog" aria-label="So sánh kích thước các hành tinh">
+  <div class="card compare-card">
+    <div class="compare-head">
+      <h2>Ai to, ai nhỏ?</h2>
+      <button class="btn sm" id="compareClose">Đóng</button>
+    </div>
+    <p>Kích thước thật của các hành tinh, so với Trái Đất.</p>
+    <div id="compareRow"></div>
+  </div>
+</div>
+
+<div id="nowebgl" class="overlay" hidden>
+  <div class="card"><h2>Trình duyệt chưa vẽ được 3D</h2><p>Hãy thử mở trang bằng Chrome, Edge hoặc Safari bản mới.</p></div>
+</div>
+
+<script src="js/three.min.js"></script>
+<script src="js/planets.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
