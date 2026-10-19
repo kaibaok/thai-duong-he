@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khám phá rừng Amazon</title>
+<meta name="description" content="Cùng bé thám hiểm rừng mưa Amazon: gặp báo đốm, lười, cá heo hồng, vẹt macaw và nhiều bạn thú, bạn cây khác.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Các phần của trang">
+  <a class="home" href="../index.html">Góc khám phá</a>
+  <a href="#so-lieu">To cỡ nào</a>
+  <a href="#song">Dòng sông</a>
+  <a href="#tang-rung">Các tầng rừng</a>
+  <a href="#muon-thu">Muôn thú</a>
+  <a href="#cay-coi">Cây cối</a>
+  <a href="#do-vui">Đố vui</a>
+  <a href="#bao-ve">Bảo vệ rừng</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="px sun-wrap" data-d="6"><div class="sun" aria-hidden="true"><b></b><i></i></div></div>
+  <div class="px cloud c1" data-d="10" aria-hidden="true"><span></span></div>
+  <div class="px cloud c2" data-d="14" aria-hidden="true"><span></span></div>
+
+  <div class="ridge r1" id="ridge1" aria-hidden="true"></div>
+  <div class="ridge r2" id="ridge2" aria-hidden="true"></div>
+
+  <div class="fly-macaw" id="flyMacaw" aria-hidden="true"></div>
+  <div class="bfly b1" aria-hidden="true"><i></i><i></i></div>
+  <div class="bfly b2" aria-hidden="true"><i></i><i></i></div>
+
+  <div class="px macaw-perch" data-d="16"><button class="critter" data-k="macaw" data-say="Quạc quạc! Tớ là vẹt macaw. Bộ lông của tớ có đủ màu đỏ, vàng, xanh. Bé thấy đẹp không?" aria-label="Chạm để nghe vẹt macaw nói"></button></div>
+  <div class="px vine" data-d="12"><div class="swing"><span class="rope"></span><button class="critter" data-k="sloth" data-say="Chào bé... tớ là lười... Tớ... di chuyển... rất... chậm. Tới nỗi rêu mọc cả trên lông tớ đó." aria-label="Chạm để nghe bạn lười nói"></button></div></div>
+
+  <div class="hero-river" aria-hidden="false">
+    <div class="dolphin" id="dolphin" aria-hidden="true"></div>
+    <div class="lily-frog"><span class="lily" id="lilyBase"></span><button class="critter" data-k="frog" data-say="Ộp ộp! Tớ là ếch phi tiêu độc. Màu rực rỡ của tớ nghĩa là: đừng ăn tớ nhé!" aria-label="Chạm để nghe bạn ếch nói"></button></div>
+  </div>
+
+  <div class="leaf leaf-l" id="leafL" aria-hidden="true"></div>
+  <div class="leaf leaf-r" id="leafR" aria-hidden="true"></div>
+
+  <div class="hero-copy">
+    <h1 id="title" aria-label="Rừng Amazon"><span class="ln">Rừng</span><span class="ln">Amazon</span></h1>
+    <p class="hero-sub">Ngôi nhà của hàng triệu bạn thú, bạn cây và một dòng sông khổng lồ. Chạm vào các bạn nhỏ để nghe họ nói nhé!</p>
+    <a class="pill hero-go" href="#so-lieu">Bắt đầu thám hiểm</a>
+  </div>
+</header>
+
+<main>
+  <section class="sec sec-stats" id="so-lieu">
+    <div class="in">
+      <h2>Amazon to cỡ nào?</h2>
+      <p class="lead">Rừng mưa lớn nhất thế giới, trải dài qua nhiều nước ở Nam Mỹ.</p>
+      <ul class="stats">
+        <li class="stat sticker"><strong><span data-count="390">390</span><small>tỷ</small></strong><p>cây xanh, thuộc khoảng 16.000 loài khác nhau.</p></li>
+        <li class="stat sticker"><strong><span data-count="9">9</span><small>nước</small></strong><p>cùng chung một khu rừng, nhiều nhất là Brazil.</p></li>
+        <li class="stat sticker"><strong><span data-count="6400">6.400</span><small>km</small></strong><p>chiều dài của sông Amazon. Nước sông đổ ra biển nhiều nhất thế giới.</p></li>
+        <li class="stat sticker"><strong><span data-count="10">10</span><small>%</small></strong><p>số loài sinh vật đã biết trên Trái Đất sống ở đây.</p></li>
+      </ul>
+
+      <div class="vn sticker">
+        <h3>Xếp thử: bao nhiêu nước Việt Nam nhét vừa Amazon?</h3>
+        <p>Rừng Amazon rộng khoảng 17 lần nước Việt Nam. Bé bấm nút để xếp từng lá cờ nhé!</p>
+        <div class="vn-grid" id="vnGrid" aria-live="polite"></div>
+        <div class="vn-row"><button class="pill" id="vnBtn">Xếp cờ</button><span id="vnCount">Đã xếp: 0 / 17 nước Việt Nam</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-river" id="song">
+    <div class="in">
+      <h2>Dòng sông biển khổng lồ</h2>
+      <p class="lead">Sông Amazon mùa nào cũng đẹp, nhưng mùa mưa nước dâng cao đến nỗi ngập cả rừng. Bé thử đổi mùa xem!</p>
+      <div class="seasons" role="group" aria-label="Chọn mùa">
+        <button class="pill on" data-s="dry" aria-pressed="true">Mùa khô</button>
+        <button class="pill" data-s="wet" aria-pressed="false">Mùa mưa</button>
+      </div>
+      <div class="river-scene sticker" id="riverScene" data-season="dry">
+        <div class="sunny" aria-hidden="true"></div>
+        <div id="trees" aria-hidden="true"></div>
+        <div class="rain" aria-hidden="true"></div>
+        <div class="water" aria-hidden="true"><span class="fish f1" data-fish="piranha"></span><span class="fish f2" data-fish="arapaima"></span><span class="fish f3" data-fish="piranha"></span></div>
+        <div class="boat" id="boat" aria-hidden="true"></div>
+      </div>
+      <p class="note" id="seasonNote" aria-live="polite"></p>
+
+      <h3 style="margin-top:44px;font-size:1.9rem">Hai dòng sông chưa chịu trộn vào nhau</h3>
+      <div class="meet sticker" role="img" aria-label="Hai dòng nước khác màu chảy sát cạnh nhau">
+        <div class="stream dark"><b>Sông Negro</b><span>nước sẫm như trà đặc</span></div>
+        <div class="stream tan"><b>Sông Solimões</b><span>nước vàng nâu vì chở nhiều phù sa</span></div>
+      </div>
+      <p class="note">Gần thành phố Manaus (Brazil), hai dòng sông gặp nhau nhưng chảy sát cạnh, nhiều ki-lô-mét sau mới hòa làm một.</p>
+    </div>
+  </section>
+
+  <section class="sec sec-layers" id="tang-rung">
+    <div class="in">
+      <h2>Rừng có bốn tầng</h2>
+      <p class="lead">Mỗi tầng là một khu phố riêng với những cư dân riêng. Chạm vào từng tầng để làm quen.</p>
+      <div class="layers">
+        <div id="treeWrap"></div>
+        <div>
+          <div class="tabs" role="tablist" aria-label="Chọn tầng rừng" id="tabs"></div>
+          <div class="panel sticker" id="panel" role="tabpanel" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-animals" id="muon-thu">
+    <div class="in">
+      <h2>Gặp muôn thú</h2>
+      <p class="lead">Chạm vào thẻ để lật xem bí mật của từng bạn.</p>
+      <ul class="cards" id="animalCards"></ul>
+    </div>
+  </section>
+
+  <section class="sec sec-plants" id="cay-coi">
+    <div class="in">
+      <h2>Bạn cây cối</h2>
+      <p class="lead">Không có cây thì chẳng có nhà cho các bạn thú. Cùng làm quen nhé!</p>
+      <ul class="cards small" id="plantCards"></ul>
+    </div>
+  </section>
+
+  <section class="sec sec-quiz" id="do-vui">
+    <div class="in">
+      <h2>Đố bé biết</h2>
+      <p class="lead">Sáu câu hỏi nhỏ về những gì bé vừa gặp.</p>
+      <div class="quiz sticker" id="quiz"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-protect" id="bao-ve">
+    <div class="in">
+      <h2>Cùng giữ rừng xanh</h2>
+      <p class="lead">Rừng Amazon có một phép màu: nó tự làm ra mưa cho chính mình.</p>
+
+      <div class="fly sticker">
+        <svg viewBox="0 0 400 250" role="img" aria-label="Cây nhả hơi nước lên trời, hơi nước thành mây, mây rơi xuống thành mưa">
+          <g stroke="#12331f" stroke-width="4" stroke-linejoin="round">
+            <path d="M80 70c-24 0-34-30-8-38 4-24 40-30 54-8 22-12 52 2 46 26 22 4 26 28 2 34H90c-8 0-14-4-10-14z" fill="#fff"/>
+            <path d="M0 214h400v36H0z" fill="#8a5a3a"/>
+            <g id="flyTrees"></g>
+          </g>
+          <g id="drops"></g>
+          <g id="rainLines"></g>
+        </svg>
+        <p>Cây hút nước từ đất rồi thở hơi nước lên trời. Hơi nước thành mây, mây thành mưa, mưa lại nuôi cây. Giống như có một dòng sông bay trên bầu trời vậy.</p>
+      </div>
+
+      <h3 style="margin-top:44px;font-size:1.9rem">Rừng cũng đang gặp khó khăn</h3>
+      <ul class="trouble">
+        <li><b>Cây bị chặt</b>Người ta chặt cây để lấy đất nuôi bò và trồng trọt.</li>
+        <li><b>Cháy rừng</b>Mùa khô, lửa dễ lan ra và các bạn thú mất nhà.</li>
+        <li><b>Đào mỏ trái phép</b>Làm đục và ô nhiễm nước sông.</li>
+      </ul>
+      <p class="note">Nhưng rất nhiều người đang bảo vệ rừng, nhất là các cộng đồng bản địa đã sống cùng rừng hàng nghìn năm. Bé cũng làm được nhiều việc nhỏ đó.</p>
+
+      <div class="pledge sticker">
+        <div>
+          <h3>Bé hứa làm gì?</h3>
+          <ul id="pledgeList"></ul>
+          <p class="msg" id="pledgeMsg" aria-live="polite">Mỗi lời hứa làm cây lớn thêm một chút.</p>
+        </div>
+        <div class="grow" id="grow" role="img" aria-label="Cây nhỏ lớn dần theo số lời hứa"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Số liệu đã được làm tròn. Hình vẽ chỉ để minh hoạ, không đúng tỉ lệ thật.</p>
+  <p><a href="../index.html">Quay về Góc khám phá</a></p>
+</footer>
+
+<div class="bubble" id="bubble" role="status"></div>
+<noscript><p style="padding:20px;text-align:center">Trang này cần bật JavaScript để các bạn thú xuất hiện.</p></noscript>
+<script src="js/main.js"></script>
+</body>
+</html>

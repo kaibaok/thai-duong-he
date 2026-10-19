@@ -27,5 +27,24 @@ const TOPICS = [
         <path d="M66 80a62 15 0 0 0 124 0" fill="none" stroke="#e8d08a" stroke-width="7"/>
       </g>
     </svg>`
+  },
+  {
+    title: 'Khám phá rừng Amazon',
+    desc: 'Gặp báo đốm, lười, cá heo hồng và các bạn cây trong khu rừng lớn nhất thế giới.',
+    href: 'kham-pha-amazon/index.html',
+    age: 'Từ 4 tuổi',
+    bg: '#1f7a3d',
+    ink: '#fff4da',
+    art: `<svg viewBox="0 0 240 150" aria-hidden="true">
+      <circle cx="196" cy="34" r="16" fill="#ffc13b"/>
+      <path d="M-4 150C0 80 60 40 120 50 110 110 60 150 -4 150z" fill="#2a8446"/>
+      <path d="M244 150c-4-70-56-106-110-98 6 56 52 98 110 98z" fill="#58c26b"/>
+      <circle cx="120" cy="96" r="34" fill="#f2b233"/>
+      <circle cx="94" cy="68" r="12" fill="#f2b233"/><circle cx="146" cy="68" r="12" fill="#f2b233"/>
+      <ellipse cx="120" cy="108" rx="16" ry="12" fill="#fff4da"/>
+      <circle cx="108" cy="90" r="6" fill="#fff"/><circle cx="132" cy="90" r="6" fill="#fff"/>
+      <circle cx="108" cy="91" r="3" fill="#12331f"/><circle cx="132" cy="91" r="3" fill="#12331f"/>
+      <path d="M114 100h12l-6 6z" fill="#ff8fb1"/>
+    </svg>`
   }
 ];
